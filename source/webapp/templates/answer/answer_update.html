@@ -10,6 +10,7 @@
             {% for field in form %}
                 {% include 'partial/quiz_form.html' with form=field %}
             {% endfor %}
-            <input type="submit" value="Редактировать">
+            <input class="btn btn-primary" type="submit" value="Редактировать">
+        <a href="{% url 'index' %}" class="btn btn-primary">Отмена</a>
         </form>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import View, TemplateView
+from django.views.generic import View, TemplateView, DetailView
 from django.urls import reverse, reverse_lazy
 
 from webapp.models import Collecting, Quiz, Answer
@@ -34,3 +34,15 @@ class CollectingTemplateView(TemplateView):
         answers = answers.filter(pk=int(quiz))
         collecting = Collecting.objects.create(quiz=answers[0].poll, answer=answers[0])
         return redirect('index')
+
+
+# class CollectingView(DetailView):
+#     template_name = 'collecting/collecting_detal_view.html'
+#
+#     def get_queryset(self):
+#         return Quiz.objects.all()
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['collect'] = QuizForm
+#         return context

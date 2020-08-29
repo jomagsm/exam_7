@@ -48,6 +48,30 @@
   }
 },
 {
+  "model": "webapp.quiz",
+  "pk": 10,
+  "fields": {
+    "question": "Test 8",
+    "created_at": "2020-08-29T12:03:33.304Z"
+  }
+},
+{
+  "model": "webapp.quiz",
+  "pk": 11,
+  "fields": {
+    "question": "Test 9",
+    "created_at": "2020-08-29T12:03:39.822Z"
+  }
+},
+{
+  "model": "webapp.quiz",
+  "pk": 13,
+  "fields": {
+    "question": "\u0432\u0430\u0432\u0430\u043f\u0432\u0430",
+    "created_at": "2020-08-29T12:54:38.769Z"
+  }
+},
+{
   "model": "webapp.answer",
   "pk": 1,
   "fields": {
@@ -77,6 +101,161 @@
   "fields": {
     "answer": "Test2",
     "poll": 8
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 9,
+  "fields": {
+    "answer": "fddfgffdgfgds",
+    "poll": 8
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 10,
+  "fields": {
+    "answer": "dfgfddfgsdsfgfdg",
+    "poll": 8
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 12,
+  "fields": {
+    "answer": "\u041e\u0449\u044c\u0444\u0432\u0430\u0432",
+    "poll": 11
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 13,
+  "fields": {
+    "answer": "erttertreretret",
+    "poll": 11
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 14,
+  "fields": {
+    "answer": "ertrteretret33333",
+    "poll": 11
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 15,
+  "fields": {
+    "answer": "errteretreret",
+    "poll": 11
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 17,
+  "fields": {
+    "answer": "sdfdsfds",
+    "poll": 11
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 1,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:31:18.365Z",
+    "answer": 10
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 2,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:32:57.586Z",
+    "answer": 10
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 3,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:34:41.635Z",
+    "answer": 7
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 4,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:38:34.303Z",
+    "answer": 7
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 5,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:39:55.297Z",
+    "answer": 9
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 6,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:42:23.128Z",
+    "answer": 9
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 7,
+  "fields": {
+    "quiz": 8,
+    "created_at": "2020-08-29T11:43:40.519Z",
+    "answer": 7
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 8,
+  "fields": {
+    "quiz": 11,
+    "created_at": "2020-08-29T12:04:24.384Z",
+    "answer": 13
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 9,
+  "fields": {
+    "quiz": 11,
+    "created_at": "2020-08-29T12:14:26.852Z",
+    "answer": 13
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 10,
+  "fields": {
+    "quiz": 11,
+    "created_at": "2020-08-29T12:36:51.003Z",
+    "answer": 14
+  }
+},
+{
+  "model": "webapp.collecting",
+  "pk": 11,
+  "fields": {
+    "quiz": 11,
+    "created_at": "2020-08-29T12:37:43.931Z",
+    "answer": 12
   }
 },
 {
