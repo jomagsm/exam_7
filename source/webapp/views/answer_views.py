@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect
-from django.views.generic import ListView, CreateView, View, UpdateView
+from django.views.generic import ListView, CreateView, View, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 
 from webapp.forms import AnswerForm
@@ -18,6 +18,7 @@ class AnswerCreateView(CreateView):
         answer.save()
         return redirect('quiz_view', pk=quiz.pk)
 
+
 class AnswerUpdateView(UpdateView):
     model = Answer
     template_name = 'answer/answer_update.html'
@@ -25,3 +26,19 @@ class AnswerUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse('index')
+
+
+# class AnswerDeleteView(DeleteView):
+#     template_name = ''
+#     model = Answer
+#
+#     def get(self, request, *args, **kwargs):
+#         return self.delete(request, *args, **kwargs)
+#
+#     def get_success_url(self):
+#         return reverse('index')
+
+class AnswerDeleteView(DeleteView):
+    template_name = 'answer/answer_delete.html'
+    model = Answer
+    success_url = reverse_lazy('index')

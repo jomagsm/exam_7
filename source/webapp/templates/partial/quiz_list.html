@@ -1,13 +1,15 @@
 <div class="card m-2" style="width: 18rem;">
   <div class="card-body">
 {#    <p class="card-text">{{ quiz.question }}</p>#}
-      <a href="{% url 'quiz_view' quiz.pk %}"><h1>{{ quiz.question }}</h1></a><br>
+      <a href="{% url 'quiz_view' quiz.pk %}"><h1>{{ quiz.question }}</h1></a>
       {% if quiz.answer.all %}
           {% for answer in quiz.answer.all %}
               <p>{{ answer.answer }}</p>
               <a href="{% url 'answer_update' answer.pk %}" class="btn btn-primary">Ре</a>
+              <a href="{% url 'answer_delete' answer.pk %}" class="btn btn-primary">Уд</a>
           {% endfor %}
       {% endif %}
+        <br>
       <a href="{% url 'quiz_update' quiz.pk %}" class="btn btn-primary">Редактировать</a>
       <a href="{% url 'quiz_delete' quiz.pk %}" class="btn btn-primary">Удалить</a>
       {% url 'quiz_delete' quiz.pk as action_url %}
