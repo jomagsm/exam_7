@@ -25,7 +25,16 @@ class AnswerUpdateView(UpdateView):
     form_class = AnswerForm
 
     def get_success_url(self):
-        return reverse('index')
+        return reverse('quiz_view',kwargs={'pk':self.object.poll.pk})
+
+    # object = self.get_object()
+    # # answer = get_object_or_404(Answer, pk=self.kwargs.get('pk'))
+    # print(object.poll.pk)
+    # return redirect('quiz_view', pk=object.poll.pk)
+    # def form_valid(self, form):
+    #     quiz = get_object_or_404(Quiz, pk=self.kwargs.get('pk'))
+    #     print(quiz)
+    #     return redirect('quiz_view', pk=quiz.pk)
 
 
 # class AnswerDeleteView(DeleteView):
@@ -42,3 +51,6 @@ class AnswerDeleteView(DeleteView):
     template_name = 'answer/answer_delete.html'
     model = Answer
     success_url = reverse_lazy('index')
+
+    def get_success_url(self):
+        return reverse('quiz_view',kwargs={'pk':self.object.poll.pk})
