@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование ответа{% endblock %}
+
+{% block content %}
+    <h1>Редактирование ответа</h1>
+       <form action="{%  url 'answer_update' answer.pk %}" method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+                {% include 'partial/quiz_form.html' with form=field %}
+            {% endfor %}
+            <input type="submit" value="Редактировать">
+        </form>
+{% endblock %}

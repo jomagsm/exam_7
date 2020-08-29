@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz{% endblock %}
+{% block menu %}
+<li class="nav-item active">
+    <a class="nav-link" href="{% url 'quiz_create' %}">Добавить вопрос <span class="sr-only">(current)</span></a>
+</li>
+
+{% endblock %}
+{% block content %}
+{#    <form action="{% url 'index' %}" method="GET">#}
+{#        <div class="form-group row mt-2">#}
+{#            <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Поиск</label>#}
+{#            <div class="col-sm-4">#}
+{#                <input type="text" name="name" class="form-control form-control-sm" id="colFormLabelSm"#}
+{#                       placeholder="Введите название">#}
+{#            </div>#}
+{#            <div class="form-group row">#}
+{#                <div class="col-sm-2">#}
+{#                    <button type="submit" class="btn btn-primary btn-sm">Поиск</button>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </form>#}
+{#    {% if is_paginated %}#}
+{#        {% include 'partial/pagination.html' %}#}
+{#    {% endif %}#}
+    <div class="row">
+        {% for quiz in quizs %}
+            {% include 'partial/quiz_list.html' %}
+        {% endfor %}
+    </div>
+    <div class="row justify-content-md-center">
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+        {% endif %}
+    </div>
+{% endblock %}

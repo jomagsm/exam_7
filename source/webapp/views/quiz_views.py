@@ -3,7 +3,7 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView, D
 from django.urls import reverse, reverse_lazy
 
 from webapp.forms import QuizForm
-from webapp.models import Quiz
+from webapp.models import Quiz, Answer
 
 
 class QuizIndexView(ListView):
@@ -24,6 +24,10 @@ class QuizIndexView(ListView):
 
         return data
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # context['form'] = BasketForm
+        return context
 
 class QuizCreateView(CreateView):
     template_name = 'quiz/quiz_create.html'
