@@ -1,0 +1,52 @@
+[
+{
+  "model": "webapp.quiz",
+  "pk": 1,
+  "fields": {
+    "question": "Test answer",
+    "created_at": "2020-08-29T05:43:59.046Z"
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 1,
+  "fields": {
+    "answer": "test",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 2,
+  "fields": {
+    "answer": "test2",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.answer",
+  "pk": 3,
+  "fields": {
+    "answer": "test3",
+    "poll": 1
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$VgJorJBbCTwV$CW9Dagz6BSWPkdC4ffNu4FkJOJA7x/rO/j+1c+sGwUs=",
+    "last_login": "2020-08-29T05:43:29.308Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-29T05:43:22.444Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

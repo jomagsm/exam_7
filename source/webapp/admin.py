@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from webapp.models import Answer, Quiz
+
+admin.site.register(Quiz)
+admin.site.register(Answer)
