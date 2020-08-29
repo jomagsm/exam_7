@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}View{% endblock %}
+
+{% block menu %}
+{% endblock %}
+
+{% block content %}
+      <h1 class="p-3">{{ quiz.question}}</h1>
+     {% if answers %}
+         <form action="{%  url 'collecting' quiz.pk %}" method="POST">
+         {% csrf_token %}
+          {% for answer in quiz.answer.all %}
+
+            <div class="form-check">
+          <input class="form-check-input" type="radio" name="select" id="gridRadios2" value="{{ answer.pk }}">
+          <label class="form-check-label" for="gridRadios2">
+              {{ answer.answer}}
+          </label>
+        </div>
+          {% endfor %}
+         <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Ответить</button>
+    </div>
+  </div>
+         </form>
+      {% endif %}
+{#    <p>Категория: <a href="{% url 'filter_category' product.category%}">{{ product.get_category_display }}</a></p>#}
+{#    <p>Описание: {{ product.description }}</p>#}
+{#    <p>Остаток: {{ product.amount }}</p>#}
+{#    <p>Цена: {{ product.price }}</p>#}
+{% endblock %}

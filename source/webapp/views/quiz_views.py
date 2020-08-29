@@ -15,6 +15,7 @@ class QuizIndexView(ListView):
     def get_queryset(self):
         data = Quiz.objects.all()
         data= data.order_by('-created_at')
+
         # http://localhost:8000/?search=ygjkjhg
         # form = SimpleSearchForm(data=self.request.GET)
         # if form.is_valid():

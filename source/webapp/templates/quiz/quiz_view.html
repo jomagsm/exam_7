@@ -6,7 +6,15 @@
 {% endblock %}
 
 {% block content %}
+
     <h1 class="p-3">{{ quiz.question }}</h1>
+    {% if quiz.answer.all %}
+          {% for answer in quiz.answer.all %}
+              <p>{{ answer.answer }}</p>
+
+          {% endfor %}
+      {% endif %}
+
 {#    <p>Категория: <a href="{% url 'filter_category' product.category%}">{{ product.get_category_display }}</a></p>#}
 {#    <p>Описание: {{ product.description }}</p>#}
 {#    <p>Остаток: {{ product.amount }}</p>#}

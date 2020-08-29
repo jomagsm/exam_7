@@ -11,6 +11,7 @@
       {% endif %}
         <br>
       <a href="{% url 'quiz_update' quiz.pk %}" class="btn btn-primary">Редактировать</a>
+        <a href="{% url 'collecting' quiz.pk %}" class="btn btn-primary">Пройти</a>
       <a href="{% url 'quiz_delete' quiz.pk %}" class="btn btn-primary">Удалить</a>
       {% url 'quiz_delete' quiz.pk as action_url %}
       {% include 'partial/quiz_form.html' with action_url=action_url%}
