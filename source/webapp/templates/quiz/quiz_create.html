@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Add new Task{% endblock %}
+{% block content %}
+    <div class="col-6">
+        <form action="{% url 'quiz_create' %}" method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+                {% include 'partial/quiz_form.html' with form=field %}
+            {% endfor %}
+            <input type="submit" value="Добавить Вопрос">
+        </form>
+    </div>
+{% endblock %}

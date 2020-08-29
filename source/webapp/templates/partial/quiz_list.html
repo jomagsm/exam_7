@@ -1,6 +1,7 @@
 <div class="card m-2" style="width: 18rem;">
   <div class="card-body">
-    <p class="card-text">{{ quiz.question }}</p>
+{#    <p class="card-text">{{ quiz.question }}</p>#}
+      <a href="{% url 'quiz_view' quiz.pk %}">{{ quiz.question }}</a><br>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>

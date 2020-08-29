@@ -1,0 +1,9 @@
+<div class="form-group">
+    <div class="form-group">
+        <label for="name">{{ form.label }}</label>
+        <p>{{ form }}</p>
+        {% for error in form.errors %}
+            <p class="text-danger">{{ error }}</p>
+        {% endfor %}
+    </div>
+</div>

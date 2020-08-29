@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views.quiz_views import QuizIndexView
+from webapp.views.quiz_views import QuizIndexView, QuizCreateView, QuizDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', QuizIndexView.as_view(), name='index'),
+    path('quiz_create/', QuizCreateView.as_view(), name='quiz_create'),
+    path('quiz_view/<int:pk>/', QuizDetailView.as_view(), name='quiz_view'),
 ]
