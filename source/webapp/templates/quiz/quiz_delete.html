@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Delete{% endblock %}
+{% block content %}
+    <div class="col-9">
+    <p class="text-center mt-5">Вы уверены что хотите удалить вопрос под номером "{{ quiz.pk }}"?</p>
+    <form method="POST" action="{% url "quiz_delete" quiz.pk %}" class="text-center">
+        {% csrf_token %}
+        <p><input class=" btn btn-outline-dark btn-sm mb-1 mr-2" type="submit" value="Confirm">
+        <a class=" btn btn-outline-dark btn-sm mb-1 mr-2" href=" {% url 'quiz_view' quiz.pk %}" role="button">Cancel
+        </a></p>
+{#            <p><a href="{% url "find" article.pk %}">Cancel</a></p>#}
+    </form>
+    </div>
+{% endblock %}

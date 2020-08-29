@@ -30,4 +30,9 @@
             {% include 'partial/quiz_list.html' %}
         {% endfor %}
     </div>
+    <div class="row justify-content-md-center">
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+        {% endif %}
+    </div>
 {% endblock %}

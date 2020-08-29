@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование Вопроса{% endblock %}
+{% block content %}
+    <div class="col-6">
+        <form action="{% url 'quiz_update' quiz.pk %}" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                {% include 'partial/quiz_form.html' with form=field %}
+            {% endfor %}
+            <input type="submit" value="Сохранить изменение">
+        </form>
+    </div>
+{% endblock %}

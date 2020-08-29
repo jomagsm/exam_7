@@ -2,7 +2,8 @@
   <div class="card-body">
 {#    <p class="card-text">{{ quiz.question }}</p>#}
       <a href="{% url 'quiz_view' quiz.pk %}">{{ quiz.question }}</a><br>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="{% url 'quiz_update' quiz.pk %}" class="btn btn-primary">Редактировать</a>
+      <a href="{% url 'quiz_delete' quiz.pk %}" class="btn btn-primary">Удалить</a>
   </div>
 </div>
 
